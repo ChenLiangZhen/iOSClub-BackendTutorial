@@ -51,7 +51,7 @@ app.get("/calculator/:mode/:numberA/:numberB", (req, res) => {
   const { mode, numberA, numberB } = req.params
   console.log(mode + " " + numberA + " " + numberB)
 
-  try { 
+  try {
 
     if (!Number.isInteger(parseInt(numberA)) || !Number.isInteger(parseInt(numberB))) {
 
@@ -69,7 +69,6 @@ app.get("/calculator/:mode/:numberA/:numberB", (req, res) => {
         return res.status(200).send({ mode: "MINUS", result: parseInt(numberA) - parseInt(numberB)})
         break
     }
-    
 
   } catch (e) {
 
